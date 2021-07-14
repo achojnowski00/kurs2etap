@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --opacityGray: .2;
+  --teamBannerAnimationTime: 4s;
+  --teamBannerAnimationTimeMS: calc(var(--teamBannerAnimationTime)*1000);
+}
+
+html {
+  font-family: 'Oswald', sans-serif;
+  font-size: 10px;
+}
+
+.team {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, .3);
+  position: relative;
+}
+
+.team img.color {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  right: -5%;
+  height: 40%;
+  animation: colorMove var(--teamBannerAnimationTime) linear infinite;
+}
+
+.team img.gray {
+  position: absolute;
+  bottom: 0;
+  left: -70%;
+  height: 110%;
+  opacity: var(--opacityGray);
+  animation: grayMove var(--teamBannerAnimationTime) linear infinite;
+}
+
+.team .member {
+  position: absolute;
+  top: 15%;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  animation: textMove var(--teamBannerAnimationTime) linear infinite;
+}
+
+.team h1 {
+  font-size: 3.5rem;
+}
+
+.team h2 {
+  font-size: 2.2rem;
+}
+
+@media (orientation: landscape) {
+  .team img.color {
+    right: 5%;
+    height: 60%;
+  }
+
+  .team img.gray {
+    bottom: -10%;
+    left: -15%;
+    height: 130%;
+  }
+
+  .team .member {
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    text-align: left;
+    letter-spacing: 1px;
+    animation: textMove var(--teamBannerAnimationTime) linear infinite;
+  }
+}
+
+@media (min-width: 640px) {
+  .team h1 {
+    font-size: 7rem;
+  }
+
+  .team h2 {
+    font-size: 4.4rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  .team h1 {
+    font-size: 10.5rem;
+  }
+
+  .team h2 {
+    font-size: 5.5rem;
+  }
+}
+
+
+
+@keyframes colorMove {
+  0% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+
+  8% {
+    opacity: 0;
+  }
+
+  13% {
+    opacity: 1;
+  }
+
+  87% {
+    opacity: 1;
+  }
+
+  92% {
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(-5%);
+    opacity: 0;
+  }
+}
+
+@keyframes grayMove {
+  0% {
+    transform: translateX(0) scale(1);
+    opacity: 0;
+  }
+
+  8% {
+    opacity: 0;
+  }
+
+  13% {
+    opacity: var(--opacityGray);
+  }
+
+  87% {
+    opacity: var(--opacityGray);
+  }
+
+  92% {
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(2%) scale(1.1);
+    opacity: 0;
+  }
+}
+
+@keyframes textMove {
+  0% {
+    transform: scale(1);
+    opacity: 0;
+  }
+
+  8% {
+    opacity: 0;
+  }
+
+  13% {
+    opacity: 1;
+  }
+
+  87% {
+    opacity: 1;
+  }
+
+  92% {
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1.1);
+    opacity: 0;
+  }
+}

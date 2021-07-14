@@ -1,0 +1,66 @@
+.wrapper {
+    margin: 10px 80px;
+    transition: .5s;
+}
+
+.wrapper.show {
+    padding-left: 300px
+}
+
+.burger {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    font-size: 40px;
+    font-weight: 900;
+
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.burger:hover {
+    cursor: pointer;
+}
+
+aside {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: -300px;
+    width: 300px;
+    background-color: black;
+    transition: .5s;
+}
+
+.fas {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    margin: 20px 0
+}
+
+a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    text-decoration: none;
+    color: white;
+}
+
+aside.loaded {
+    left: 0;
+}
+
+/* .burger:hover+aside {
+    left: 0;
+} */

@@ -1,0 +1,20 @@
+button {
+    padding: 10px;
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: transparent;
+    border: 2px solid black;
+}
+
+button:hover {
+    background-color: #ddd;
+}
+
+.squere {
+    width: 100px;
+    height: 100px;
+    background-color: #000;
+    position: fixed;
+    top: calc(50% - 50px);
+    left: calc(50% - 50px);
+}

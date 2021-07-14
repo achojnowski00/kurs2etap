@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            border:5px solid black;
+        }
+
+        .resualt{
+            flex-basis: 10%;
+            background-color: #eee;
+        }
+
+        .panel{
+            flex-grow: 1;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .panel div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-basis: 30%;
+            flex-grow: 1;
+            font-size: 50px;
+            border-top: 5px solid #ddd;
+            border-left: 5px solid #666;
+            border-bottom: 5px solid #000;
+        }
+
+        .panel div:hover{
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+    <div class="resualt"></div>
+    <div class="panel">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>+</div>
+        <div>0</div>
+        <div>-</div>
+        <div>/</div>
+        <div>.</div>
+        <div>*</div>
+        <div>C</div>
+        <div>=</div>
+    </div>
+</body>
+</html>

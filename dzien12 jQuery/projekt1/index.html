@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <button class="js">Dawaj JS!</button>
+    <button class="jq">Dawaj JQ!</button>
+    <br>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+        // jQuery('.jq'); = $('.jq');
+        // $('.jq').click(function(){})
+        $('.jq').on('click', function () {
+            $('body').append('<div class = "box"></div>')
+        })
+    </script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

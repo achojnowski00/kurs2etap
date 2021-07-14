@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+
+        ul{
+            display: flex;
+            list-style: none;
+        }
+
+        li{
+            flex-basis: 100%;
+        }
+
+        a{
+            text-align: center;
+            display: block;
+            padding: 22px;
+            margin: 15px;
+            font-size: 22px;
+            text-decoration: none;
+            color:whitesmoke;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #444;
+            transition: .2s;
+        }
+
+        a:hover{
+            background-color: #222;
+        }
+
+        @media(max-width:1024px){
+            ul{
+                flex-direction: column;
+            }
+
+            a{
+                margin: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Przycisk 1</a></li>
+            <li><a href="#">Przycisk 2</a></li>
+            <li><a href="#">Przycisk 3</a></li>
+            <li><a href="#">Przycisk 4</a></li>
+            <li><a href="#">Przycisk 5</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
