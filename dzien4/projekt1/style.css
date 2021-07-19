@@ -1,13 +1,7 @@
-/* <div class="red circle"></div>
-  <div class="green circle"></div>
-  <div class="blue circle"></div>
-  <div class="orange circle"></div>
-  <div class="bg">
-    <p class="red">Czerwony</p>
-    <p class="green">Zielony</p>
-    <p class="blue">Niebieski</p>
-    <p class="orange">Pomarańczowy</p>
-  </div> */
+:root {
+  --offset: 20px;
+  --size: 100px;
+}
 
 .bg {
   position: absolute;
@@ -25,8 +19,8 @@ p {
   line-height: 100vh;
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 50px;
-  transition: 1s;
+  font-size: 100px;
+  transition: 1s .1s;
 }
 
 .circle {
@@ -53,11 +47,6 @@ p {
   background-color: orange;
 }
 
-:root {
-  --offset: 20px;
-  --size: 50px;
-}
-
 div.red {
   top: var(--offset);
   left: var(--offset);
@@ -78,18 +67,9 @@ div.orange {
   right: var(--offset);
 }
 
-div.red:hover~.bg p.red {
-  opacity: 1;
-}
-
-div.green:hover~.bg p.green {
-  opacity: 1;
-}
-
-div.blue:hover~.bg p.blue {
-  opacity: 1;
-}
-
+div.red:hover~.bg p.red,
+div.green:hover~.bg p.green,
+div.blue:hover~.bg p.blue,
 div.orange:hover~.bg p.orange {
   opacity: 1;
 }
