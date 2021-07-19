@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+
+  <style>
+    button {
+      font-size: 32px;
+    }
+
+    h1.large {
+      font-size: 160px;
+    }
+
+    h1.small {
+      font-size: 40px;
+    }
+
+    h1.borderActive {
+      border-width: 20px;
+    }
+
+    h1 {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 80px;
+      text-align: center;
+      margin-top: 200px;
+      border: 0px solid black;
+      transition: 1s;
+    }
+  </style>
+
+</head>
+
+<body>
+  <button class="larger">2x wiekszy</button>
+  <button class="smaller">2x mniejszy</button>
+  <button class="border">Obramowanie</button>
+  <h1>Nazwa</h1>
+
+
+  <script>
+    $('.larger').on('click', function () {
+      $('h1').removeClass('small');
+      $('h1').addClass('large');
+    })
+
+    $('.smaller').on('click', function () {
+      $('h1').addClass('small');
+      $('h1').removeClass('large');
+    })
+
+    $('.border').on('click', function () {
+      $('h1').toggleClass('borderActive');
+    })
+  </script>
+</body>
+
+</html>
