@@ -1,0 +1,53 @@
+.bell {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  border: 5px solid black;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  font-size: 50px;
+  transition: .1s;
+}
+
+.bell i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: top;
+  animation: bell .7s linear infinite;
+  animation-play-state: paused;
+  transition: .2s;
+}
+
+.bell:hover {
+  background-color: #000;
+  color: white;
+}
+
+.bell:hover i {
+  animation-play-state: running;
+}
+
+@keyframes bell {
+  0% {
+    transform: translate(-50%, -50%) rotate(0);
+  }
+
+  25% {
+    transform: translate(-50%, -50%) rotate(-5deg);
+  }
+
+  50% {
+    transform: translate(-50%, -50%) rotate(0);
+  }
+
+  75% {
+    transform: translate(-50%, -50%) rotate(5deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(0);
+  }
+}

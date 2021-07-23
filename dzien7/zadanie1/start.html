@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .wrap {
+      position: relative;
+    }
+
+    img {
+      position: absolute;
+      width: 100%;
+      animation: fade 5s infinite both;
+    }
+
+    img:nth-child(2) {
+      animation-delay: calc(5s/2);
+    }
+
+    @keyframes fade {
+      0% {
+        opacity: 0;
+      }
+
+      5% {
+        opacity: 1;
+      }
+
+      45% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <img src="img1.jpg" alt="">
+    <img src="img2.jpg" alt="">
+  </div>
+</body>
+
+</html>
