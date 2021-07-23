@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  position: absolute;
+  bottom: 15vh;
+  right: 15vw;
+  border: 2px solid black;
+  width: 360px;
+  height: 100px;
+  background-color: #fff;
+  font-size: 40px;
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 1s;
+}
+
+button span {
+  position: relative;
+  display: block;
+  line-height: 100px;
+  top: 0;
+  right: 0;
+  transition: 1s;
+}
+
+button span:nth-child(2) {
+  top: -100px;
+  right: -360px;
+  font-size: 0px;
+}
+
+button:hover {
+  background-color: rgba(161, 255, 161, 0.459);
+}
+
+button:hover span:nth-child(1) {
+  top: -100px;
+  font-size: 0px;
+}
+
+button:hover span:nth-child(2) {
+  right: 0;
+  font-size: 40px;
+}

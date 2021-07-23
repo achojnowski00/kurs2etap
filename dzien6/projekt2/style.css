@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+div {
+  width: 200px;
+  height: 200px;
+  background-color: #000;
+  animation: move 10s 20 5s, color 10s 20 5s;
+}
+
+@keyframes move {
+  0% {
+    margin-left: 0;
+  }
+
+  30% {
+    margin-left: calc(100% - 200px);
+  }
+
+  50% {
+    margin-left: calc(100% - 200px);
+  }
+
+  80% {
+    margin-left: 0;
+  }
+
+  100% {
+    margin-left: 0;
+  }
+}
+
+@keyframes color {
+  0% {
+    background: black;
+  }
+
+  10% {
+    background: darkred;
+  }
+
+  50% {
+    background: #444;
+  }
+
+  90% {
+    background: darkred;
+  }
+
+  100% {
+    background: black;
+  }
+}
