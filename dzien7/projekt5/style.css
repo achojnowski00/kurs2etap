@@ -1,0 +1,31 @@
+.arrow {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70px;
+  height: 70px;
+  background-color: #666;
+  border: none;
+  border-radius: 50%;
+  text-align: center;
+  overflow: hidden;
+}
+
+.arrow i {
+  color: white;
+  font-size: 45px;
+  text-shadow: 0 20px 0 white, 0 40px 0 white;
+  transform: translateY(-200%);
+  animation: arrows 2s linear infinite;
+}
+
+.arrow:hover i {
+  animation-play-state: paused;
+}
+
+@keyframes arrows {
+  100% {
+    transform: translateY(150%);
+  }
+}
